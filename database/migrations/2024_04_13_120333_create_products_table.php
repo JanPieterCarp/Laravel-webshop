@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string(column: 'name');
-            $table->unsignedInteger(column: 'description');
+            $table->text(column: 'description');
             $table->unsignedInteger(column: 'price');
-            $table->unsignedInteger(column: 'main_image_id')->nullable();
             $table->timestamps();
         });
     }

@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('product_variants', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger(column: 'product_id');
-            $table->unsignedInteger(column: 'color');
-            $table->unsignedInteger(column: 'size');
+            $table->text(column: 'color');
+            $table->text(column: 'size');
             $table->timestamps();
         });
     }
